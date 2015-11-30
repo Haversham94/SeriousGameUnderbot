@@ -1,0 +1,14 @@
+{
+  "name": "seriousgameunderbot",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "coffee-script": "coffeescript#~1.10.0",
+    "bootstrap": "~3.3.6",
+    "jasmine-core": "jasmine#~2.3.4"
+  }
+}
