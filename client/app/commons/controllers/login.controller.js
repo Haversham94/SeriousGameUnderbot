@@ -6,9 +6,13 @@ commonApp.controller('LoginControllerCommon', function ($scope, $state, Auth) {
     $scope.submitted = false;
     //end-non-standard
 
+    $scope.isLoggedIn = Auth.isLoggedIn;
+    $scope.isAdmin = Auth.isAdmin;
+    $scope.getCurrentUser = Auth.getCurrentUser;
+
+
     $scope.login = function (form) {
         $scope.submitted = true;
-        console.log($scope.user);
         if (form.$valid) {
             Auth.login({
                     email: $scope.user.email,
@@ -16,7 +20,11 @@ commonApp.controller('LoginControllerCommon', function ($scope, $state, Auth) {
                 })
                 .then(() => {
                     // Logged in, redirect to home
-                    $state.go('main');
+                    if (!$scope.isAdmin()) {
+                        $state.go('niveau');
+                    } else {
+                        $state.go('admin');
+                    }
                 })
                 .catch(err => {
                     $scope.errors.other = err.message;

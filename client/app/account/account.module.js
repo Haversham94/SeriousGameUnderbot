@@ -1,6 +1,6 @@
 'use strict';
 
-var accountApp = angular.module('accountApp', ['ngMaterial', 'commonApp']);
+var accountApp = angular.module('accountApp', ['commonApp']);
 
 accountApp.config(function ($stateProvider) {
     $stateProvider

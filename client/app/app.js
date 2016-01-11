@@ -6,6 +6,7 @@ var sguApp = angular.module('seriousGameUnderbotApp', [
     'authApp',
     'adminApp',
     'seriousGameUnderbotApp.constants',
+    'niveauApp',
     'ngCookies',
     'ngResource',
     'ngSanitize',
