@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="45" height="35" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="Wall" tilewidth="16" tileheight="16">
+  <image source="../../tileset/Wall.png" width="320" height="816"/>
+ </tileset>
+ <tileset firstgid="1021" name="Floor" tilewidth="16" tileheight="16">
+  <image source="../../tileset/Floor.png" width="336" height="624"/>
+ </tileset>
+ <layer name="Floor" width="45" height="35">
+  <data encoding="base64" compression="zlib">
+   eJzt1cEJwCAQRNE9WJamh2gPpv8OYgERdBk2gfwHc/aDoGYAAGjkZFYEO1Jc8znOqoI1mmn+QHMfZ12be7vZ4+luaNajOcbsrVH8pytTNkeNZpqVzZ6/UzkAAP7sBpDbbtc=
+  </data>
+ </layer>
+ <layer name="Character" width="45" height="35">
+  <data encoding="base64" compression="zlib">
+   eJztzjENAAAIA7BZwb9JPOwhJK2CJgDAR3MdAAAAACgtRJIAIg==
+  </data>
+ </layer>
+ <layer name="Wall" width="45" height="35">
+  <data encoding="base64" compression="zlib">
+   eJzt1cEJACAMBEFtSGuwCPtvxQoSEI4zwg7kv/ERWwMAVDS6bmZ/vc29RbMFzR40x5T3rOo7Z10062RdW/inZqNsropmD5o9fmx23TPlrQMAIHIAf9cV2Q==
+  </data>
+ </layer>
+ <layer name="Collision" width="45" height="35">
+  <data encoding="base64" compression="zlib">
+   eJzt1LENACEQxECqoP9SiYgRaDGH5JEu/F9HtCZJqqqHjuyt+C9qx2Zmx2Zmh347Em8a2bzDZsaq+falmwkn+zYz+zYz+z82z+9enSRJSQOrfgn5
+  </data>
+ </layer>
+</map>

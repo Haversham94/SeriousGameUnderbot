@@ -1,0 +1,22 @@
+<!doctype html> 
+<html lang="en"> 
+	<head> 
+		<meta charset="UTF-8" />
+		<title>Phaser - Making your first game, part 1</title>
+		<script type="text/javascript" src="../controllers/js/modules/phaser.min.js"></script>
+		<script type="text/javascript" src="../controllers/js/game/map.js"></script>
+		<script type="text/javascript" src="../controllers/js/game/robot.js"></script>
+		<script type="text/javascript" src="../controllers/js/game/boot.js"></script>
+		<script type="text/javascript" src="../controllers/js/game/load.js"></script>
+		<script type="text/javascript" src="../controllers/js/game/play.js"></script>
+		<script type="text/javascript" src="../controllers/js/game/game.js"></script>
+	</head>
+	<body>
+		<select name="lvl" size="1" id="lvl" onchange="playState.restart();">
+			<option value="1" selected="selected">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+		</select>
+		<div id="gameDiv"></div>
+	</body>
+</html>
