@@ -62,8 +62,19 @@ export function create(req, res, next) {
 
 export function createUsers(req, res, next) {
 
-    //TODO recuperer la variable de type tableau et la parcourir pour creer chaque utilisateur 
-    var newUser = new User(req.body);
+    var users= req.body;
+    
+    for(var i =0; i<users.length; i++){
+        var newUser = new User(users[i]);
+        newUser.provider = 'local';
+        newUser.role = 'user';
+        newUser.saveAsync();
+    }
+    console.log(req.body);
+    res.send({content : "success"});
+
+
+    /*var newUser = new User(req.body);
     newUser.provider = 'local';
     newUser.role = 'user';
     newUser.saveAsync()
@@ -72,15 +83,15 @@ export function createUsers(req, res, next) {
                 id: user._id
             });
         })
-        /*.spread(function (user) {
+        .spread(function (user) {
              var token = jwt.sign({ _id: user._id }, config.secrets.session, {
                expiresIn: 60 * 60 * 5
              });
             res.json({token});
-        })*/
+        })
         .catch(validationError(res));
+}*/
 }
-
 
 
 /**

@@ -2,7 +2,8 @@
 
 (function () {
 
-    function AuthService($location, $http, $cookies, $q, appConfig, Util, User) {
+    function AuthService($location, $http, $cookies, $q, CONSTANT, Util, User) {
+        var appConfig = CONSTANT.appConfig;
         var safeCb = Util.safeCb;
         var currentUser = {};
         var userRoles = appConfig.userRoles || [];
@@ -68,6 +69,7 @@
                             return safeCb(callback)(err);
                         }).$promise;
                 },
+
 
                 /**
                  * Change password

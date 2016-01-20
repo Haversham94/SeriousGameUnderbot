@@ -5,14 +5,13 @@
         <h1>Register User by file import</h1>
     </div>
     <div class="col-sm-12">
-        <form class="form" name="form" ng-submit="registerUserByFileImport(form)" novalidate>
+        <form class="form" name="form" ng-submit="registerUserByFileImport()" novalidate>
 
             <label class="file">
                 <!--<input type="file" id="file" accept=".csv , .json"  />-->
-                <div ng-file-reader on-readed="onReaded( event, file )" read-method="readMethod" accept=".csv , .json"></div>
+                <input type="file" id="input" onchange="angular.element(this).scope().onFileChange(this)" accept=".csv , .json">
                 <!--<span class="file-custom"></span>-->
             </label>
-
             <button class="btn btn-inverse btn-lg btn-login" type="submit">
                 Create
             </button>

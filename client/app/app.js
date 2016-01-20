@@ -5,13 +5,13 @@ var sguApp = angular.module('seriousGameUnderbotApp', [
     'accountApp',
     'authApp',
     'adminApp',
-    'seriousGameUnderbotApp.constants',
     'niveauApp',
     'ngCookies',
     'ngResource',
     'ngSanitize',
     'btford.socket-io',
     'ui.router',
+    'gameApp',
     'ui.bootstrap',
     'validation.match'
 ]);

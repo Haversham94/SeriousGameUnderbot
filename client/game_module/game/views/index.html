@@ -1,0 +1,22 @@
+<navbar></navbar>
+<!-- game utils  -->
+<script src="game_module/game/controllers/map.js"></script>
+<script src="game_module/game/controllers/robot.js"></script>
+<script src="game_module/game/controllers/states/boot.js"></script>
+<script src="game_module/game/controllers/states/load.js"></script>
+<script src="game_module/game/controllers/states/play.js"></script>
+<script src="game_module/game/controllers/game.js"></script>
+<!-- end game utils -->
+
+<div>
+    <select name="lvl" size="1" id="lvl" onchange="playState.restart();">
+        <option value="1" selected="selected">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+    <div id="gameDiv"></div>
+
+</div>
+
+
+<footer></footer>

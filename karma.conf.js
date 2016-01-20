@@ -30,6 +30,7 @@ module.exports = function(config) {
       'client/bower_components/angular-validation-match/dist/angular-validation-match.min.js',
       'client/bower_components/angular-notify/dist/angular-notify.js',
       'client/bower_components/ngFileReader/src/ngFileReader.js',
+      'client/bower_components/phaser/build/phaser.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'node_modules/socket.io-client/socket.io.js',

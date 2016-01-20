@@ -1,0 +1,4 @@
+gameApp.controller('GameController', function(){
+    
+    
+});
