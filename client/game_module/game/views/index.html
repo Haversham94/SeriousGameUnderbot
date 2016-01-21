@@ -9,18 +9,23 @@
 <script src="game_module/game/controllers/game.js"></script>
 <!-- end game utils -->
 
-<<<<<<< HEAD
 <select name="lvl" size="1" id="lvl" onchange="playState.restart();">
     <option value="1" selected="selected">1</option>
     <option value="2">2</option>
     <option value="3">3</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
 </select>
 
 <div class="row">
 
     <div class="col-md-6" id="gameDiv"></div>
 
-  <div class="ace_editor col-md-6" ui-ace="{
+    <div class="ace_editor col-md-6" ui-ace="{
   useWrapMode : true,
   showGutter: true,
   theme:'twilight',
@@ -28,23 +33,5 @@
   onLoad: aceLoaded,
   onChange: aceChanged }"></div>
 
-=======
-<div>
-    <select name="lvl" size="1" id="lvl" onchange="playState.restart();">
-        <option value="1" selected="selected">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-		<option value="9">9</option>
-        <option value="10">10</option>
-    </select>
-    <div id="gameDiv"></div>
->>>>>>> 24fed2fc0ff737b53da1713178d28699dfa8783d
 
-</div>
-
-
-<footer></footer>
+    <footer></footer>

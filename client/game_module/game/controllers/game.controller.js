@@ -8,7 +8,6 @@ gameApp.controller('GameController', function ($scope) {
     };
 
     $scope.aceChanged = function (e) {
-        //
 
 
     };
