@@ -1,13 +1,15 @@
 <navbar></navbar>
 <!-- game utils  -->
-<script src="game_module/game/controllers/map.js"></script>
-<script src="game_module/game/controllers/robot.js"></script>
-<script src="game_module/game/controllers/states/boot.js"></script>
-<script src="game_module/game/controllers/states/load.js"></script>
-<script src="game_module/game/controllers/states/play.js"></script>
+<script src="game_module/game/controllers/class/map.js"></script>
+<script src="game_module/game/controllers/class/robot.js"></script>
+<script src="game_module/game/controllers/class/coin.js"></script>
+<script src="game_module/game/controllers/state/boot.js"></script>
+<script src="game_module/game/controllers/state/load.js"></script>
+<script src="game_module/game/controllers/state/play.js"></script>
 <script src="game_module/game/controllers/game.js"></script>
 <!-- end game utils -->
 
+<<<<<<< HEAD
 <select name="lvl" size="1" id="lvl" onchange="playState.restart();">
     <option value="1" selected="selected">1</option>
     <option value="2">2</option>
@@ -26,6 +28,21 @@
   onLoad: aceLoaded,
   onChange: aceChanged }"></div>
 
+=======
+<div>
+    <select name="lvl" size="1" id="lvl" onchange="playState.restart();">
+        <option value="1" selected="selected">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+		<option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <div id="gameDiv"></div>
+>>>>>>> 24fed2fc0ff737b53da1713178d28699dfa8783d
 
 </div>
 
