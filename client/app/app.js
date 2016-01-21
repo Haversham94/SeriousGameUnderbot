@@ -12,6 +12,7 @@ var sguApp = angular.module('seriousGameUnderbotApp', [
     'btford.socket-io',
     'ui.router',
     'gameApp',
+    'ui.gravatar',
     'ui.bootstrap',
     'validation.match'
 ]);

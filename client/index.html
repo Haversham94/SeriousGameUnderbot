@@ -22,12 +22,15 @@
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
     <link rel="stylesheet" href="app/app.css">
+    <link rel="stylesheet" href="game_module/game/styles/game.css">
+
     <!-- injector:css -->
     <link rel="stylesheet" href="app/admin/styles/admin.css">
     <link rel="stylesheet" href="app/app.css">
     <link rel="stylesheet" href="app/main/styles/main.css">
     <link rel="stylesheet" href="components/footer/footer.css">
     <link rel="stylesheet" href="components/modal/modal.css">
+    <link rel="stylesheet" href="components/navbar/styles/navbar.css">
     <!-- endinjector -->
     <!-- endbuild -->
 </head>
@@ -78,15 +81,19 @@
     <script src="bower_components/angular-notify/dist/angular-notify.js"></script>
     <script src="bower_components/ngFileReader/src/ngFileReader.js"></script>
     <script src="bower_components/phaser/build/phaser.js"></script>
+    <script src="bower_components/angular-ui-ace/ui-ace.js"></script>
+    <script src="bower_components/angular-gravatar/build/angular-gravatar.js"></script>
     <!-- endbower -->
+
     <script src="socket.io-client/socket.io.js"></script>
     <!-- endbuild -->
     <!-- build:js(.tmp) app/app.js -->
     <script src="app/app.js"></script>
+
     <script src="lib/PapaParse/papaparse.min.js"></script>
-
+    <script src="bower_components/ace-builds/src-min-noconflict/ace.js"></script>
     <script src="game_module/game/game.module.js"></script>
-
+    <script src="game_module/game/controllers/game.controller.js"></script>
 
     <!-- injector:js -->
     <script src="app/niveau/niveau.module.js"></script>

@@ -1,0 +1,7 @@
+.gravatar {
+    border-radius: 50%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}

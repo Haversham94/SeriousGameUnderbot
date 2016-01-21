@@ -8,13 +8,24 @@
 <script src="game_module/game/controllers/game.js"></script>
 <!-- end game utils -->
 
-<div>
-    <select name="lvl" size="1" id="lvl" onchange="playState.restart();">
-        <option value="1" selected="selected">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-    </select>
-    <div id="gameDiv"></div>
+<select name="lvl" size="1" id="lvl" onchange="playState.restart();">
+    <option value="1" selected="selected">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+</select>
+
+<div class="row">
+
+    <div class="col-md-6" id="gameDiv"></div>
+
+  <div class="ace_editor col-md-6" ui-ace="{
+  useWrapMode : true,
+  showGutter: true,
+  theme:'twilight',
+  mode: 'javascript',
+  onLoad: aceLoaded,
+  onChange: aceChanged }"></div>
+
 
 </div>
 
