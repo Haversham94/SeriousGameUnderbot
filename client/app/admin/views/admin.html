@@ -1,198 +1,29 @@
 <navbar></navbar>
 
-<div class="container">
+<div class="card4">
+    <div class="col-md-2">
+    <p>&nbsp;</p>
 
-    <p>The delete user and user index api routes are restricted to users with the 'admin' role.</p>
-    <a ng-click="addUser()">Ajouter utilisateur</a>
-    <a ng-click="addUserByImport()">Ajouter des utilisateurs</a>
-    <ul class="list-group user-list">
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
-        <li class="list-group-item" ng-repeat="user in users">
-            <div class="user-info">
-                <strong>{{user.name}}</strong>
-                <br>
-                <span class="text-muted">{{user.email}}</span>
-            </div>
-            <a ng-click="delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
-        </li>
+   <img gravatar-src="user.email" gravatar-size="180" >
+    </br>
+    <a class="link" ng-click="addUser()">Ajouter utilisateur</a>
+        </br>
+   <button type="button" class="btn btn-primary" ui-sref="admin.afficherstats">Statistique </button>   
+    </br>
+    <button type="button" class="btn btn-primary" ui-sref="admin.afficherusers">Afficher utilisateurs</button>
+   </br>
+  <button type="button" class="btn btn-primary"  ui-sref="admin.adduser">Ajouter un utilisateur</button>
+</br>    
+<button type="button"   class="btn btn-primary" ui-sref="admin.addusers">
+Importer un fichier CSV</button>
 
+</div>
 
+<div class="col-md-6">            
+            <div ui-view></div>
+        </div>
+    
+    
 
-    </ul>
 </div>
 <footer></footer>

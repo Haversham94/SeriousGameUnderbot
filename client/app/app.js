@@ -10,16 +10,17 @@ var sguApp = angular.module('seriousGameUnderbotApp', [
     'accountApp',
     'authApp',
     'adminApp',
+    'seriousGameUnderbotApp.constants',
     'niveauApp',
     'ngCookies',
     'ngResource',
     'ngSanitize',
     'btford.socket-io',
     'ui.router',
-    'gameApp',
     'ui.gravatar',
     'ui.bootstrap',
     'validation.match'
+    
 ]);
 sguApp.config(function ($urlRouterProvider, $locationProvider) {
     $urlRouterProvider

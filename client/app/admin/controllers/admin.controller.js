@@ -216,5 +216,8 @@ adminApp.controller('AdminController', function ($scope, User, $state, Auth, not
     $scope.addUserByImport = function () {
         $state.go('addusers');
     };
+    $scope.Retour = function () {
+        $state.go('admin');
+    };
 
 });
