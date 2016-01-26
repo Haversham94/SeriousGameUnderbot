@@ -1,7 +1,9 @@
 'use strict';
+//@author : generate and maintained by ~~|Rodolphe AGUIDISSOU|~~
+
 
 var accountApp = angular.module('accountApp', ['commonApp']);
-
+//module configuration with differents states(routes) 
 accountApp.config(function ($stateProvider) {
     $stateProvider
         .state('login', {
@@ -10,7 +12,7 @@ accountApp.config(function ($stateProvider) {
             controller: 'LoginController'
         })
         .state('logout', {
-            url: '/logout?referrer',
+            url: '/logout?referrer', //referrer -> current user
             referrer: 'main',
             template: '',
             controller: function ($state, Auth) {
@@ -21,6 +23,7 @@ accountApp.config(function ($stateProvider) {
                 $state.go(referrer);
             }
         })
+     
         .state('signup', {
             url: '/signup',
             templateUrl: 'app/account/views/signup.html',
@@ -31,9 +34,35 @@ accountApp.config(function ($stateProvider) {
             templateUrl: 'app/account/views/settings.html',
             controller: 'SettingsController',
             authenticate: true
-        });
+        })
+     
+    .state('profil', {
+            url: '/profil',
+            templateUrl: 'app/account/views/profil.html',
+            controller: 'SettingsController',
+            authenticate: true
+        })
+    .state('Retour2', {
+            url: '/Retour2',
+            templateUrl: 'app/account/views/profil.html',
+            controller: 'SettingsController',
+            authenticate: 'true'
+        })
+.state('startgame', {
+            url: '/startgame',
+            templateUrl: 'app/account/views/jouer.html',
+            controller: 'SettingsController',
+            
+        })
+
 });
 
+
+/*block to set up listeners for routing events or unauthenticated requests
+function that validates that we have an authenticated user every time that we change our route
+*/
+
+//definition of $stateChangeStart ==> /client/componenents/auth/router.decorator.js
 accountApp.run(function ($rootScope) {
     $rootScope.$on('$stateChangeStart', function (event, next, nextParams, current) {
         if (next.name === 'logout' && current && current.name && !current.authenticate) {

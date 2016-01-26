@@ -1,4 +1,5 @@
 'use strict';
+//@author : generate and maintained by ~~|Rodolphe AGUIDISSOU|~~
 
 var adminApp = angular.module('adminApp', [
   'authApp',
@@ -7,3 +8,4 @@ var adminApp = angular.module('adminApp', [
   'ui.router',
     'constantApp'
 ]);
+
