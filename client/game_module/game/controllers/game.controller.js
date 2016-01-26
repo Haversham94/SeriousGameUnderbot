@@ -13,8 +13,8 @@ gameApp.controller('GameController', function ($scope) {
     };
 
     $scope.execute = function (code) {
-        var code1 = code.getValue();
-        eval(code1);
+        // var code1 = code.getValue();
+        eval(code);
     };
 });
 

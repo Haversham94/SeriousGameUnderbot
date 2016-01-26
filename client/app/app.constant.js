@@ -1,9 +1,9 @@
-(function(angular, undefined) {
 'use strict';
+var constantApp = angular.module('constantApp', []);
 
-angular.module('seriousGameUnderbotApp.constants', [])
-
-.constant('appConfig', {userRoles:['guest','user','admin']})
-
-;
-})(angular);
+constantApp.constant('CONSTANT', {
+    appConfig: {
+        userRoles: ['guest', 'user', 'admin']
+    },
+    ENDPOINT: 'http://localhost:9000/api'
+});
