@@ -31,6 +31,8 @@ module.exports = function(config) {
       'client/bower_components/angular-notify/dist/angular-notify.js',
       'client/bower_components/ngFileReader/src/ngFileReader.js',
       'client/bower_components/phaser/build/phaser.js',
+      'client/bower_components/angular-ui-ace/ui-ace.js',
+      'client/bower_components/angular-gravatar/build/angular-gravatar.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'node_modules/socket.io-client/socket.io.js',

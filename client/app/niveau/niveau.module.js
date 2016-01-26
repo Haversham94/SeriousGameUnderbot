@@ -2,7 +2,8 @@
 
 var niveauApp = angular.module('niveauApp', ['commonApp',
                                              'authApp',
-                                             'ui.router']);
+                                             'ui.router'
+                                                     ]);
 
 
 niveauApp.config(function ($stateProvider) {

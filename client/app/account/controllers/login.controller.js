@@ -1,4 +1,5 @@
 'use strict';
+//@author : generate and maintained by ~~|Rodolphe AGUIDISSOU|~~
 accountApp.controller('LoginController', function ($scope, $state, Auth, $controller) {
 
     $controller('LoginControllerCommon', {
@@ -6,7 +7,4 @@ accountApp.controller('LoginController', function ($scope, $state, Auth, $contro
         $state: $state,
         Auth: Auth
     });
-
-
-
 });

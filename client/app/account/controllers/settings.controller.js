@@ -1,4 +1,5 @@
 'use strict';
+//@author : generate and maintained by ~~|Rodolphe AGUIDISSOU|~~
 
 accountApp.controller('SettingsController', function (Auth, $scope) {
     //start-non-standard
@@ -6,15 +7,20 @@ accountApp.controller('SettingsController', function (Auth, $scope) {
     $scope.submitted = false;
     //end-non-standard
 
+    //  ##########################################################
+    //  # Function that allow the user to change their password  #
+    //  ##########################################################
     $scope.changePassword = function (form) {
-        $scope.submitted = true;
+        $scope.submitted = true; //password change form submitted 
 
         if (form.$valid) {
+
+            //calling server -> password change service 
             Auth.changePassword($scope.user.oldPassword, $scope.user.newPassword)
                 .then(() => {
                     $scope.message = 'Password successfully changed.';
                 })
-                .catch(() => {
+                .catch(() => { // possible errors catching 
                     form.password.$setValidity('mongoose', false);
                     $scope.errors.other = 'Incorrect password';
                     $scope.message = '';

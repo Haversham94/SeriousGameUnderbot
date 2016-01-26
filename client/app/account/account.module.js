@@ -1,7 +1,8 @@
 'use strict';
+//@author : generate and maintained by ~~|Rodolphe AGUIDISSOU|~~
 
 var accountApp = angular.module('accountApp', ['commonApp']);
-
+//module configuration with differents states(routes) 
 accountApp.config(function ($stateProvider) {
     $stateProvider
         .state('login', {
@@ -10,7 +11,7 @@ accountApp.config(function ($stateProvider) {
             controller: 'LoginController'
         })
         .state('logout', {
-            url: '/logout?referrer',
+            url: '/logout?referrer', //referrer -> current user
             referrer: 'main',
             template: '',
             controller: function ($state, Auth) {
@@ -34,6 +35,12 @@ accountApp.config(function ($stateProvider) {
         });
 });
 
+
+/*block to set up listeners for routing events or unauthenticated requests
+function that validates that we have an authenticated user every time that we change our route
+*/
+
+//definition of $stateChangeStart ==> /client/componenents/auth/router.decorator.js
 accountApp.run(function ($rootScope) {
     $rootScope.$on('$stateChangeStart', function (event, next, nextParams, current) {
         if (next.name === 'logout' && current && current.name && !current.authenticate) {

@@ -10,8 +10,14 @@ adminApp.controller('AdminController', function ($scope, User, $state, Auth, not
     $scope.errors = {};
     $scope.submitted = false;
     //end-non-standard
+
+    //object that reprensent users from csvFile
     $scope.csvResult = {};
 
+
+    //  #######################################################
+    //  # Function that parse csv file (library PapaParse)    #
+    //  #######################################################
     $scope.onFileChange = function (fileInput) {
         console.log(fileInput.files[0], 'changed');
         // Parse local CSV file
@@ -21,17 +27,20 @@ adminApp.controller('AdminController', function ($scope, User, $state, Auth, not
             dynamicTyping: true,
             comments: '#',
             complete: function (results) {
-                //console.log('Finished:', results.data);
+                //CSV File parsing complete
 
+                //now we generate password for all users of the CSV File
                 for (var i = 0; i < results.data.length; i++) {
 
+                    //adding new field password for each user of the CSV file 
                     results.data[i].password = generatePassword(6);
 
                 }
 
+                //store the users and generated password to object csvResult 
                 $scope.csvResult = results.data;
 
-                console.log('Finished:', results.data);
+                //console.log('Finished:', results.data);
 
             }
         });
@@ -42,6 +51,7 @@ adminApp.controller('AdminController', function ($scope, User, $state, Auth, not
 
 
 
+    //======== FOR INFORMATION : lines below was used to parse manually csv File before using function above===
 
     /*$scope.readMethod = "readAsBinaryString";
 
@@ -82,19 +92,14 @@ adminApp.controller('AdminController', function ($scope, User, $state, Auth, not
                 var user = array[i];
 
                   json.first_name = user[0];
-     // json.last_name = user[1];
-      //json.email = user[2];
-      //json.age = user[3];
+     
                 for (var j = 0; j < header.length; j++) {
 
                     json[header[j]] = user[j];
 
 
                 }
-
-
-
-                //result[i]= json;
+                
                 result.push(json);
 
             }
@@ -113,6 +118,12 @@ adminApp.controller('AdminController', function ($scope, User, $state, Auth, not
 
 
      };*/
+    //=====================================================================================================
+
+
+    //  #################################
+    //  # Function that delete user     #
+    //  #################################
 
     $scope.delete = function (user) {
         user.$remove();
@@ -121,7 +132,9 @@ adminApp.controller('AdminController', function ($scope, User, $state, Auth, not
 
 
 
-    //
+    //  ################################################
+    //  # Function that generate Password for User     #
+    //  ################################################
     function generatePassword(plength) {
         var keylist = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         var password = '';
@@ -135,13 +148,20 @@ adminApp.controller('AdminController', function ($scope, User, $state, Auth, not
 
     };
 
+
+    //  #################################################################
+    //  # Function that Allow Admin to add User (Fill out a Form)       #
+    //  #################################################################   
+
     $scope.registerUser = function (form) {
 
-        $scope.submitted = true;
+        $scope.submitted = true; //form submitted
 
         if (form.$valid) {
+            //if form valid -> generate password for User
             $scope.user.password = generatePassword(6);
-            console.log($scope.user.password);
+
+            //create user : calling server -> calling approriate service with parameter name, email, password 
             Auth.createUser({
                     name: $scope.user.name,
                     email: $scope.user.email,
@@ -149,7 +169,7 @@ adminApp.controller('AdminController', function ($scope, User, $state, Auth, not
 
                 })
                 .then(function (user) {
-                    //$rootScope.registeredUser = $scope.user.name;
+                    //creating user without error : go to admin viem and notify 
                     $state.go('admin');
                     notify($scope.user.name + ' ajouté');
                 })
@@ -168,11 +188,15 @@ adminApp.controller('AdminController', function ($scope, User, $state, Auth, not
 
 
 
+    //  #################################################################
+    //  # Function that Allow Admin to add Users (Import CSV file)      #
+    //  #################################################################   
 
+    // TODO : Generate errors on the server side and raised when calling appropriate service to create Users
     $scope.registerUserByFileImport = function () {
         AdminAppService.createUsers.call($scope.csvResult)
             .$promise.then(function () {
-                //$rootScope.registeredUser = $scope.user.name;
+                //creating user without error : go to admin viem and notify 
                 $state.go('admin');
                 notify('Utilisateurs ajoutés avec succes');
             });
@@ -180,12 +204,15 @@ adminApp.controller('AdminController', function ($scope, User, $state, Auth, not
 
     };
 
+    //Function link adduser click with appropriate view
     $scope.addUser = function () {
 
         $state.go('adduser');
 
     };
 
+
+    //Function link addusers click with appropriate view
     $scope.addUserByImport = function () {
         $state.go('addusers');
     };
