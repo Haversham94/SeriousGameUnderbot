@@ -5,8 +5,10 @@ accountApp.controller('LoginController', function ($scope, $state, Auth, $contro
         $scope: $scope,
         $state: $state,
         Auth: Auth
+        
     });
 
+  
 
 
 });

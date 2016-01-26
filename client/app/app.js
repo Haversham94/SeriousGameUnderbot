@@ -12,8 +12,10 @@ var sguApp = angular.module('seriousGameUnderbotApp', [
     'ngSanitize',
     'btford.socket-io',
     'ui.router',
+    'ui.gravatar',
     'ui.bootstrap',
     'validation.match'
+    
 ]);
 sguApp.config(function ($urlRouterProvider, $locationProvider) {
     $urlRouterProvider

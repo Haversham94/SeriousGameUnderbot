@@ -6,3 +6,4 @@ var adminApp = angular.module('adminApp', [
     'ngFileReader',
   'ui.router'
 ]);
+
