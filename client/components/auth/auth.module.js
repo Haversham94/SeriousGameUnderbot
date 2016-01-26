@@ -1,7 +1,7 @@
 'use strict';
 
 var authApp = angular.module('authApp', [
-  'seriousGameUnderbotApp.constants',
+  'constantApp',
   'seriousGameUnderbotApp.util',
   'ngCookies',
   'ui.router'

@@ -17,10 +17,15 @@
     "angular-validation-match": "~1.5.2",
     "angular-notify": "~2.5.0",
     "ngFileReader": "~0.0.6",
+<<<<<<< HEAD
+=======
+    "phaser": "~2.4.4",
+    "angular-ui-ace": "bower",
+>>>>>>> a58af067619e7b48e7f08323c7d1582fb84a4fa0
     "angular-gravatar": "~0.4.1"
   },
   "devDependencies": {
-    "angular-mocks": "~1.4.0"
+    "angular-mocks": "~1.4.8"
   },
   "resolutions": {
     "angular": "~1.4.8"
