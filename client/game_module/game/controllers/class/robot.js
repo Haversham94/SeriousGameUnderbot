@@ -48,84 +48,39 @@ var Robot = {
 			distance = 1;
 		}
 		
-		this.posX = this.sprite.body.x;
-		this.posY = this.sprite.body.y;
-		
-		if (this.moving == 'none') {
+		do {
+			this.posX = this.sprite.x;
+			this.posY = this.sprite.y;
+
+
 			switch(direct) {
 				case 'up' :
-					this.destY = this.sprite.body.y - 16*distance;
+					game.physics.arcade.moveToXY(this.sprite,this.posX,this.posY - 16*distance);
+					this.sprite.animations.play('up')
 					break;
 				case 'down' :
-					this.destY = this.sprite.body.y + 16*distance;
+					game.physics.arcade.moveToXY(this.sprite,this.posX,this.posY + 16*distance);
+					this.sprite.animations.play('down')
 					break;
 				case 'right' :
-					this.destX = this.sprite.body.x + 16*distance;
+					game.physics.arcade.moveToXY(this.sprite,this.posX + 16*distance,this.posY);
+					this.sprite.animations.play('right')
 					break;
 				case 'left' :
-					this.destX = this.sprite.body.x - 16*distance;
+					game.physics.arcade.moveToXY(this.sprite,this.posX - 16*distance,this.posY);
+					this.sprite.animations.play('left')
 					break;
 				default:
 			}
-			this.moving = direct;
-		} else {
-			switch(this.moving) {
-				case 'up' :
-					if (this.posY > this.destY) {
-						this.sprite.body.velocity.y = -60;
-						this.sprite.animations.play('up');
-					} else {
-						this.posY = this.destY;
-						this.moving = 'none';
-						this.sprite.body.velocity.y = 0;
-						this.sprite.animations.stop();
-					}
-					break;
-				case 'down' :
-					if (this.posY < this.destY) {
-						this.sprite.body.velocity.y = 60;
-						this.sprite.animations.play('down');
-					} else {
-						this.posY = this.destY;
-						this.moving = 'none';
-						this.sprite.body.velocity.y = 0;
-						this.sprite.animations.stop();
-					}
-					break;
-				case 'right' :
-					if (this.posX < this.destX) {
-						this.sprite.body.velocity.x = 60;
-						this.sprite.animations.play('right');
-					} else {
-						this.posX = this.destX;
-						this.moving = 'none';
-						this.sprite.body.velocity.x = 0;
-						this.sprite.animations.stop();
-					}
-					break;
-				case 'left' :
-					if (this.posX > this.destX) {
-						this.sprite.body.velocity.x = -60;
-						this.sprite.animations.play('left');
-					} else {
-						this.posX = this.destX;
-						this.moving = 'none';
-						this.sprite.body.velocity.x = 0;
-						this.sprite.animations.stop();
-					}
-					break;
-				default:
-					this.sprite.body.velocity.x = 0;
-					this.sprite.body.velocity.y = 0;
-					this.sprite.animations.stop();
-			}
-			
+
+
 			if(this.sprite.body.blocked.up == true || this.sprite.body.blocked.down == true || this.sprite.body.blocked.right == true || this.sprite.body.blocked.left == true){
 				this.moving = 'none';
 				this.sprite.body.velocity.x = 0;
 				this.sprite.body.velocity.y = 0;
 				this.sprite.animations.stop();
 			}
-		}
+			
+		} while (this.sprite.body.velocity.x != 0 || this.sprite.body.velocity.y != 0);
 	}
 };

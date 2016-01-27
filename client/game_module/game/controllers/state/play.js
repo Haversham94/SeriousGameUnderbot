@@ -1,8 +1,4 @@
 var playState = {
-    map: null,
-    robot: null,
-    coins: null,
-
     create: function () {
         map = Object.create(Map);
         map.create();

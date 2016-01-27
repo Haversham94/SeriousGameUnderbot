@@ -8,7 +8,7 @@ gameApp.controller('GameController', function ($scope) {
     };
 
     $scope.aceChanged = function (e) {
-
-
+		robot.move('up', 5);
+		robot.move('left', 7);
     };
 });
