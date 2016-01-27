@@ -8,13 +8,12 @@ gameApp.controller('GameController', function ($scope) {
     };
 
     $scope.aceChanged = function (e) {
-		robot.move('up', 5);
-		robot.move('left', 7);
     };
 
     $scope.execute = function (code) {
         // var code1 = code.getValue();
         eval(code);
+		current = 0;
     };
 });
 
