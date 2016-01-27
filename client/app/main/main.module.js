@@ -1,5 +1,4 @@
 'use strict';
-
 var mainApp = angular.module('mainApp', ['ui.router', 'commonApp']);
 
 mainApp.config(function ($stateProvider) {

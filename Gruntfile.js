@@ -18,7 +18,7 @@ module.exports = function (grunt) {
         protractor: 'grunt-protractor-runner',
         buildcontrol: 'grunt-build-control',
         istanbul_check_coverage: 'grunt-mocha-istanbul',
-        ngconstant: 'grunt-ng-constant'
+        //ngconstant: 'grunt-ng-constant'
     });
 
     // Time how long tasks take. Can help when optimizing build times
@@ -61,10 +61,11 @@ module.exports = function (grunt) {
                 files: ['<%= yeoman.client %>/{app,components}/**/!(*.spec|*.mock).js'],
                 tasks: ['newer:babel:client']
             },
+            /*,
             ngconstant: {
                 files: ['<%= yeoman.server %>/config/environment/shared.js'],
                 tasks: ['ngconstant']
-            },
+            }*/
             injectJS: {
                 files: [
           '<%= yeoman.client %>/{app,components}/**/!(*.spec|*.mock).js',
@@ -301,6 +302,25 @@ module.exports = function (grunt) {
             }
         },
 
+        /*// Dynamically generate angular constant `appConfig` from
+    // `server/config/environment/shared.js`
+    ngconstant: {
+      options: {
+        name: 'seriousGameUnderbotApp.constants',
+        dest: '<%= yeoman.client %>/app/app.constant.js',
+        deps: [],
+        wrap: true,
+        configPath: '<%= yeoman.server %>/config/environment/shared'
+      },
+      app: {
+        constants: function() {
+          return {
+            appConfig: require('./' + grunt.config.get('ngconstant.options.configPath'))
+          };
+        }
+      }
+    },
+*/
         // Package all the html partials into a single javascript payload
         ngtemplates: {
             options: {
