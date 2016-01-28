@@ -1,12 +1,12 @@
 'use strict';
 //@author : generate and maintained by ~~|Rodolphe AGUIDISSOU|~~
 
-accountApp.controller('SettingsController', function (Auth,$state, $scope) {
+accountApp.controller('SettingsController', function (Auth, $state, $scope) {
     //start-non-standard
     $scope.errors = {};
     $scope.submitted = false;
     //end-non-standard
-$scope.settings = function () {
+    $scope.settings = function () {
 
         $state.go('settings');
 
@@ -21,7 +21,7 @@ $scope.settings = function () {
         $state.go('Retour2');
 
     };
- $scope.startgame = function () {
+    $scope.startgame = function () {
 
         $state.go('startgame');
 

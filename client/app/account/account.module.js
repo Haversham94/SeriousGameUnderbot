@@ -6,25 +6,26 @@ var accountApp = angular.module('accountApp', ['commonApp']);
 //module configuration with differents states(routes) 
 accountApp.config(function ($stateProvider) {
     $stateProvider
+
         .state('login', {
             url: '/login',
             templateUrl: 'app/account/views/login.html',
             controller: 'LoginController'
         })
         .state('logout', {
-            url: '/logout?referrer', //referrer -> current user
+            url: '/logout?referrer', //referrer -> current user to disconnect
             referrer: 'main',
             template: '',
             controller: function ($state, Auth) {
                 var referrer = $state.params.referrer ||
                     $state.current.referrer ||
                     'main';
-                Auth.logout();
-                $state.go(referrer);
+                Auth.logout(); //calling logout function 
+                $state.go(referrer); //go to main page after disconnection
             }
         })
-     
-        .state('signup', {
+
+    .state('signup', {
             url: '/signup',
             templateUrl: 'app/account/views/signup.html',
             controller: 'SignupController',
@@ -35,24 +36,24 @@ accountApp.config(function ($stateProvider) {
             controller: 'SettingsController',
             authenticate: true
         })
-     
+
     .state('profil', {
             url: '/profil',
             templateUrl: 'app/account/views/profil.html',
             controller: 'SettingsController',
             authenticate: true
         })
-    .state('Retour2', {
+        .state('Retour2', {
             url: '/Retour2',
             templateUrl: 'app/account/views/profil.html',
             controller: 'SettingsController',
             authenticate: 'true'
         })
-.state('startgame', {
+        .state('startgame', {
             url: '/startgame',
             templateUrl: 'app/account/views/jouer.html',
             controller: 'SettingsController',
-            
+
         })
 
 });

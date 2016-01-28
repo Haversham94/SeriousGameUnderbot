@@ -2,7 +2,7 @@
 niveauApp.controller('NiveauController', function ($scope, $state, $stateParams) {
 
     $scope.niveauId = $stateParams.niveauId;
-      $scope.goiframe = function () {
+    $scope.goiframe = function () {
 
         $state.go('goiframe');
 
@@ -13,21 +13,25 @@ niveauApp.controller('NiveauController', function ($scope, $state, $stateParams)
 
     };
 
-/*if (process.argv.length <= 2) {
-    console.log("Usage: " + __filename + "assets/images/game_assets/map");
-    process.exit(-1);
-}
+    //TODO : A definir du cote du serveur et renvoyer le contenu sous forme JSON
+    /*
+       var fs = require('fs');
+    fs.realpath(__dirname, function(err, path) {
+        if (err) {
+            console.log(err);
+         return;
+        }
+        console.log('Path is : ' + path);
+    });
+    fs.readdir(__dirname, function(err, files) {
+        if (err) return;
+        files.forEach(function(f) {
+            console.log('Files: ' + f);
+        });
+    });
 
-var path = process.argv[2];
 
-fs.readdir(path, function (err, items) {
-    console.log(items);
-
-    for (var i = 0; i < items.length; i++) {
-        console.log(items[i]);
-    }
-});*/
-
+    */
 
 
 });

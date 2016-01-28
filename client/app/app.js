@@ -2,8 +2,8 @@
 //@author : ~~|Rodolphe AGUIDISSOU|~~
 
 /*MAIN MODULE OF THE PROJECT
-We load all dependances of front end module that we use 
-and all the different sub-modules
+We load ALL dependances of front end modules that we use 
+and all the different sub-modules(eg : adminApp , accountApp) 
 */
 var sguApp = angular.module('seriousGameUnderbotApp', [
     'mainApp',
@@ -29,7 +29,7 @@ sguApp.config(function ($urlRouterProvider, $locationProvider) {
         .otherwise('/');
 
     /*  configure html5 to get links working 
-      If you don't do this, you URLs will be url.com/#/home rather than 
+      If we don't do this, URLs will be url.com/#/home rather than 
       url.com/home  */
     //check angularjs documentation for more explanation
     $locationProvider.html5Mode(true);

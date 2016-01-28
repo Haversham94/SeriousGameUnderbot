@@ -1,25 +1,18 @@
-
-
 <div class="rw3">
     <p>&nbsp;</p>
-   
-        <h1>Register User by file import</h1>
+
+    <h1>Register User by file import</h1>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
-        <form class="form" name="form" ng-submit="registerUserByFileImport(form)" novalidate>
+    <form class="form" name="form" ng-submit="registerUserByFileImport(form)" novalidate>
 
-            <label class="file">
-                <!--<input type="file" id="file" accept=".csv , .json"  />-->
-                <div ng-file-reader on-readed="onReaded( event, file )" read-method="readMethod" accept=".csv , .json"></div>
-                <!--<span class="file-custom"></span>-->
-            </label>
-    </br>
-    <p>&nbsp;</p>
-            <button class="btn btn-inverse btn-lg btn-login" type="submit">
-                Create
-            </button>
+        <label class="file">
+            <input type="file" id="input" onchange="angular.element(this).scope().onFileChange(this)" accept=".csv ,.json">
+        </label>
+        </br>
+        <p>&nbsp;</p>
+        <button class="btn btn-inverse btn-lg btn-login" type="submit">
+            Create
+        </button>
 
-    </div>
-
-
-
+</div>

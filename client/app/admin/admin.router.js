@@ -2,7 +2,7 @@
 
 adminApp.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/admin");
-    
+
     $stateProvider
         .state('admin', {
             url: '/admin',
@@ -22,32 +22,32 @@ adminApp.config(function ($stateProvider, $urlRouterProvider) {
             controller: 'AdminController',
             authenticate: 'admin'
         })
-    .state('Retour', {
+        .state('Retour', {
             url: '/Retour',
             templateUrl: 'app/admin/views/admin.html',
             controller: 'AdminController',
             authenticate: 'admin'
         })
-     .state('admin.addusers', {
+        .state('admin.addusers', {
             url: '/addusers',
             templateUrl: 'app/admin/views/addusers.html',
-            
+            authenticate: 'admin'
         })
-       .state('admin.adduser', {
+        .state('admin.adduser', {
             url: '/adduser',
             templateUrl: 'app/admin/views/adduser.html',
-            
+            controller: 'AdminController',
         })
-    .state('admin.afficherusers', {
+        .state('admin.afficherusers', {
             url: '/afficherusers',
             templateUrl: 'app/admin/views/afficherusers.html',
-            
+            controller: 'AdminController',
+            authenticate: 'admin'
         })
-   .state('admin.afficherstats', {
+        .state('admin.afficherstats', {
             url: '/afficherstats',
             templateUrl: 'app/admin/views/afficherstats.html',
-            
-        })
-    
-});
 
+        })
+
+});

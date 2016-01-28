@@ -170,7 +170,7 @@ adminApp.controller('AdminController', function ($scope, User, $state, Auth, not
                 })
                 .then(function (user) {
                     //creating user without error : go to admin viem and notify 
-                    $state.go('admin');
+                    $state.go('addusers');
                     notify($scope.user.name + ' ajouté');
                 })
                 .catch(err => {
@@ -197,7 +197,7 @@ adminApp.controller('AdminController', function ($scope, User, $state, Auth, not
         AdminAppService.createUsers.call($scope.csvResult)
             .$promise.then(function () {
                 //creating user without error : go to admin viem and notify 
-                $state.go('admin');
+                $state.go('admin.afficherusers');
                 notify('Utilisateurs ajoutés avec succes');
             });
 
