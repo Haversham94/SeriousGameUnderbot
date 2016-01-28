@@ -22,13 +22,9 @@ adminApp.config(function ($stateProvider, $urlRouterProvider) {
             controller: 'AdminController',
             authenticate: 'admin'
         })
-        .state('Retour', {
-            url: '/Retour',
-            templateUrl: 'app/admin/views/admin.html',
-            controller: 'AdminController',
-            authenticate: 'admin'
-        })
-        .state('admin.addusers', {
+
+    .state('admin.addusers', {
+
             url: '/addusers',
             templateUrl: 'app/admin/views/addusers.html',
             authenticate: 'admin'

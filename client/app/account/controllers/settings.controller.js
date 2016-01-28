@@ -6,24 +6,25 @@ accountApp.controller('SettingsController', function (Auth, $state, $scope) {
     $scope.errors = {};
     $scope.submitted = false;
     //end-non-standard
-    $scope.settings = function () {
+
+    $scope.settingsClick = function () {
 
         $state.go('settings');
 
     };
-    $scope.goiframe2 = function () {
+    $scope.GoiframefromProfilClick = function () {
 
-        $state.go('goiframe2');
-
-    };
-    $scope.Retour2 = function () {
-
-        $state.go('Retour2');
+        $state.go('goiframefromProfil');
 
     };
-    $scope.startgame = function () {
+    $scope.BacktoProfilClick = function () {
 
-        $state.go('startgame');
+        $state.go('backtoProfil');
+
+    };
+
+    $scope.startGameClick = function () {
+        $state.go('game');
 
     };
 

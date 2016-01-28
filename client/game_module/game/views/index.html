@@ -6,8 +6,24 @@
 <script src="game_module/game/controllers/class/action.js"></script>
 <script src="game_module/game/controllers/game.js"></script>
 <!-- end game utils -->
+<div class="card1">
 
-<select name="lvl" size="1" id="lvl" onchange="start();">
+
+    <div id="gameDiv">
+
+    </div>
+
+    <div id="gameDivRight" class="ace_editor dashboardadmin" ui-ace="{
+  useWrapMode : true,
+  showGutter: true,
+  theme:'twilight',
+  mode: 'javascript',
+  onLoad: aceLoaded,
+  onChange: aceChanged }" ng-model=code>
+         
+          </div>
+    <div id="executcode">
+ <select name="lvl" size="1" id="lvl" onchange="start();">
     <option value="1" selected="selected">1</option>
     <option value="2">2</option>
     <option value="3">3</option>
@@ -17,22 +33,13 @@
     <option value="8">8</option>
     <option value="9">9</option>
     <option value="10">10</option>
-</select>
+</select>    	
+        <script  type="text/javascript">start();</script>
 
-<div class="row">
-
-	<script type="text/javascript">start();</script>
-    <div class="col-md-6" id="gameDiv"></div>
-
-    <div class="ace_editor col-md-6" ui-ace="{
-  useWrapMode : true,
-  showGutter: true,
-  theme:'twilight',
-  mode: 'javascript',
-  onLoad: aceLoaded,
-  onChange: aceChanged }" ng-model=code></div>
-</div>
 <button ng-click="execute(code)" class="btn btn-primary">Executer!</button>
+ </div>
+    
+</div>
 
 
 <footer></footer>
