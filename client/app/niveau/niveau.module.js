@@ -30,13 +30,7 @@ niveauApp.config(function ($stateProvider) {
             controller: 'NiveauController'
 
         })
-        .state('startGamefromProfil', {
-            url: '/startgame',
-            templateUrl: 'game_module/game/views/index.html',
-            controller: 'SettingsController',
-
-        })
-
+       
     .state('goiframefromProfil', {
 url:'/niveau',
         templateUrl: 'app/niveau/views/index.html',
