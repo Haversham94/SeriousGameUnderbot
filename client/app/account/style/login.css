@@ -10,12 +10,12 @@ img.img {
 	}
 
 
- .row2{
-     width:700px;
- margin-left:180px;
+ .card2 .row2{
+     width:100%;
+margin-left:25%;
  } 
-.row3{
-     width:680px;
+.card2.row3{
+     width:100%;
 text-align: center;
     
  }

@@ -15,12 +15,7 @@ niveauApp.config(function ($stateProvider) {
             authenticate: true
         })
 
-    .state('goIframe', {
-        url: '/niveau',
-        templateUrl: 'app/niveau/views/niveauiframe.html',
-        controller: 'NiveauController',
-        authenticate: true
-    });
+    
     // permet l'acces à la page niveauiframe directement 
 
     $stateProvider

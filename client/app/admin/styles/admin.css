@@ -1,6 +1,7 @@
 .container2 {
     width: 700px;
     overflow: hidden;
+    text-align: center;
 }
 .row {
     width: 700px;
@@ -56,7 +57,7 @@
 .link {
     cursor: pointer;
 }
-<!--
+
 .user-list li {
     display: flex;
     border: none;
@@ -66,7 +67,7 @@
     margin-left: auto;
     margin-right: auto;
 }
--->
+
 .user-list li:last-child {
     border-bottom: none;
 }
