@@ -11,7 +11,7 @@ niveauApp.controller('NiveauController', function ($scope, $state, $stateParams)
     };
     $scope.startGamefromProfilClick = function () {
 
-        $state.go('startGamefromProfil');
+        $state.go('game');
 
     };
 
