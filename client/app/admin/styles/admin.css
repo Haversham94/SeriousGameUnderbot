@@ -3,6 +3,13 @@
     overflow: hidden;
     text-align: center;
 }
+.container6 {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+   padding-left:40px;
+    padding-right:40px;
+}
 .row {
     width: 700px;
     margin-left: 0px;
