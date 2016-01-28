@@ -14,15 +14,14 @@
 
     <h2> Informations personnelles</h2>
     <div class='area'>
-        <p>&nbsp;</p>
+        </br>
    <!-- using a scope variable //-->
 <img gravatar-src="user.email" gravatar-size="100">
-
-    <h3>Nom: DIDON</h3>
-      <h3>Prenom: Bryan</h3>
+    <h3>Nom: {{ getCurrentUser().name }}</h3>
+      <h3>Prenom: {{ getCurrentUser().name }}</h3>
       <h3>Age: 23</h3>
       <h3>Sexe: M</h3>
-      <h3>Adresse email: Bryan.didon@hotmail.fr</h3>
+      <h3>Adresse email: {{ getCurrentUser().email }}</h3>
       <h3>Classe: 2</h3>
        <ul>
       </ul>

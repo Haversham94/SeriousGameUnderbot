@@ -56,11 +56,17 @@ body {
 }
 
 
+.avatar {
+border-radius: 50%;
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+}
+
 
 .card1 {
   position:relative;
   height:550px;
-  width:1000px;
+  width:100%;
   margin-top:0px;
  margin-right:auto;
 margin-left:auto;
@@ -78,7 +84,7 @@ margin-left:auto;
     overflow-y: scroll;
   position:relative;
   height:400px;
-  width:80%;
+  width:60%;
     margin-right:auto;
         margin-left:auto;
   background:#ECECEC;

@@ -4,12 +4,12 @@ niveauApp.controller('NiveauController', function ($scope, $state, $stateParams)
     $scope.niveauId = $stateParams.niveauId;
       $scope.goiframeClick = function () {
 
-        $state.go('GoiframeClick');
+        $state.go('goIframe');
 
     };
     $scope.startGamefromProfilClick = function () {
 
-        $state.go('startGamefromProfilClick');
+        $state.go('startGamefromProfil');
 
     };
 

@@ -15,7 +15,7 @@ niveauApp.config(function ($stateProvider) {
             authenticate: true
         })
 
-    .state('GoiframeClick', {
+    .state('goIframe', {
         url: '/niveau',
         templateUrl: 'app/niveau/views/niveauiframe.html',
         controller: 'NiveauController',
@@ -30,17 +30,17 @@ niveauApp.config(function ($stateProvider) {
             controller: 'NiveauController'
 
         })
-        .state('startGamefromProfilClick', {
+        .state('startGamefromProfil', {
             url: '/startgame',
-            templateUrl: 'app/account/views/play.html',
+            templateUrl: 'game_module/game/views/index.html',
             controller: 'SettingsController',
 
         })
 
-    .state('GoiframefromProfilClick', {
+    .state('goiframefromProfil', {
 url:'/niveau',
-        templateUrl: 'game_module/game/views/index.html',
+        templateUrl: 'app/niveau/views/index.html',
         controller: 'NiveauController',
-        authenticate: true
+        authenticate:true
     });
 });

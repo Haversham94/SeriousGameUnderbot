@@ -29,31 +29,26 @@ accountApp.config(function ($stateProvider) {
             templateUrl: 'app/account/views/signup.html',
             controller: 'SignupController',
         })
-        .state('settingsClick', {
+        .state('settings', {
             url: '/settings',
             templateUrl: 'app/account/views/settings.html',
             controller: 'SettingsController',
-            authenticate: 'true'
+            authenticate: true
         })
      
     .state('profil', {
             url: '/profil',
             templateUrl: 'app/account/views/profil.html',
             controller: 'SettingsController',
-            authenticate:' true'
+            authenticate: true
         })
-    .state('BacktoProfilClick', {
-            url: '/Profil',
+    .state('backtoProfil', {
+            url: '/profil',
             templateUrl: 'app/account/views/profil.html',
             controller: 'SettingsController',
-            authenticate: 'true'
+            authenticate: true
         })
-.state('startGameClick', {
-            url: '/startGame',
-            templateUrl: 'game_module/game/views/index.html',
-            controller: 'SettingsController',
-            
-        })
+
 
 });
 

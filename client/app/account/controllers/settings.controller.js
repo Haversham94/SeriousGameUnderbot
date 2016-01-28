@@ -8,22 +8,22 @@ accountApp.controller('SettingsController', function (Auth,$state, $scope) {
     //end-non-standard
 $scope.settingsClick = function () {
 
-        $state.go('settingsClick');
+        $state.go('settings');
 
     };
     $scope.GoiframefromProfilClick = function () {
 
-        $state.go('GoiframefromProfilClick');
+        $state.go('goiframefromProfil');
 
     };
     $scope.BacktoProfilClick = function () {
 
-        $state.go('BacktoProfilClick');
+        $state.go('backtoProfil');
 
     };
  $scope.startGameClick = function () {
 
-        $state.go('startGameClick');
+        $state.go('game');
 
     };
 
