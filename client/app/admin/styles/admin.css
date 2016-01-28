@@ -7,10 +7,7 @@
     margin-left: 0px;
     margin-right: auto;
 }
-.gravatarcenter {
-    margin-right: 5px;
-    ;
-}
+
 .trash {
     color: rgb(209, 91, 71);
 }
@@ -27,8 +24,8 @@
     width: 177px;
 }
 .col-md-6 {
+   
     overflow-y: scroll;
-    border-radius: 15px;
      margin-top:5px;
   margin-left: 10px;
     height: 520px;
