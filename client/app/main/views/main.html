@@ -7,7 +7,7 @@
 </br>
 </br>
 
-<!--jouer lorsque nous ne somme pas login  nous redirige vers la page authentification 
+<!--when we are connected, the image "play" we redirigie to the authentication page
 -->
 <li ng-hide="isLoggedIn()">
 
@@ -17,7 +17,7 @@
      onmouseout="this.src='../../../assets/images/main_utils/boutons-jouer.png';"/>
     </a>
 </li>
-<!--lorsque nous somme connecté l'image login nous redirigie vers le profile du joueur 
+<!--when we are connected, the image "play" we redirigie to player profile
 -->
 <li ng-show="isLoggedIn()">
     <a ui-sref="profil">

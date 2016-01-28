@@ -18,10 +18,14 @@
    <!-- using a scope variable //-->
 <img class="gravatar" gravatar-src="user.email" gravatar-size="50">
         </br>
+           <!-- Recovering the name //-->
+
     <h3>Nom: {{ getCurrentUser().name }}</h3>
+         <!-- Recovering the name //-->
       <h3>Prenom: {{ getCurrentUser().name }}</h3>
       <h3>Age: 23</h3>
       <h3>Sexe: M</h3>
+         <!-- Recovering the email  //-->
       <h3>Adresse email: {{ getCurrentUser().email }}</h3>
       <h3>Classe: 2</h3>
        <ul>
@@ -32,10 +36,12 @@
   </article2>
 
 </div>
-    
-  <button type="button" class="btn btn-default" ng-click="settingsClick()">Modifier</button>
-<button type="button" class="btn btn-success" ng-click="GoiframefromProfilClick()">Choix du Niveau</button>
+             <!-- button for accessed the page settings(modifier)  //-->
 
+  <button type="button" class="btn btn-default" ng-click="settingsClick()">Modifier</button>
+<!-- button for accessed the page niveau/index.html (for choose the level) //-->
+<button type="button" class="btn btn-success" ng-click="GoiframefromProfilClick()">Choix du Niveau</button>
+<!-- button for accessed the page game/index.html (the game)  //-->
 <button type="button" class="btn btn-success" ng-click="startGameClick()">Jouer</button>
       
 </div>
