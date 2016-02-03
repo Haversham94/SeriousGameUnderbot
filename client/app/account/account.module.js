@@ -13,7 +13,7 @@ accountApp.config(function ($stateProvider) {
             controller: 'LoginController'
         })
         .state('logout', {
-            url: '/logout?referrer', //referrer -> current user to disconnect
+            url: '/logout?referrer', //referrer = l'état vers lequel on est rediriger apres deconnexion 
             referrer: 'main',
             template: '',
             controller: function ($state, Auth) {
@@ -21,7 +21,7 @@ accountApp.config(function ($stateProvider) {
                     $state.current.referrer ||
                     'main';
                 Auth.logout(); //calling logout function 
-                $state.go(referrer); //go to main page after disconnection
+                $state.go(referrer); //go to referrer page after disconnection
             }
         })
 
@@ -44,12 +44,14 @@ accountApp.config(function ($stateProvider) {
         authenticate: true
     })
 
-    .state('goiframe', {
-url:'/niveau',
-        templateUrl: 'app/niveau/views/index.html',
-        controller: 'NiveauController',
-        authenticate:true
+
+    .state('backtoProfil', {
+        url: '/profil',
+        templateUrl: 'app/account/views/profil.html',
+        controller: 'SettingsController',
+        authenticate: true
     });
+
 
 });
 
@@ -58,11 +60,14 @@ url:'/niveau',
 function that validates that we have an authenticated user every time that we change our route
 */
 
+// fonction qui est appeller authomatiquement quand le module est creer 
+
 //definition of $stateChangeStart ==> /client/componenents/auth/router.decorator.js
 accountApp.run(function ($rootScope) {
     $rootScope.$on('$stateChangeStart', function (event, next, nextParams, current) {
+        //
         if (next.name === 'logout' && current && current.name && !current.authenticate) {
-            next.referrer = current.name;
+            next.referrer = current.name; // set logout referrer
         }
     });
 });

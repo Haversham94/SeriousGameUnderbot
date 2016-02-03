@@ -1,3 +1,4 @@
+'use strict';
 commonApp.controller('LoginControllerCommon', function ($scope, $state, Auth) {
 
     //start-non-standard

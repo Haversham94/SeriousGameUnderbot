@@ -24,7 +24,7 @@ var UserSchema = new Schema({
 
 
 /**
- * Virtuals
+ * Virtuals   = Getters
  */
 
 // Public profile information

@@ -62,16 +62,18 @@ export function create(req, res, next) {
 
 export function createUsers(req, res, next) {
 
-    var users= req.body;
-    
-    for(var i =0; i<users.length; i++){
+    var users = req.body;
+
+    for (var i = 0; i < users.length; i++) {
         var newUser = new User(users[i]);
         newUser.provider = 'local';
         newUser.role = 'user';
         newUser.saveAsync();
     }
     console.log(req.body);
-    res.send({content : "success"});
+    res.send({
+        content: "success"
+    });
 
 
     /*var newUser = new User(req.body);
