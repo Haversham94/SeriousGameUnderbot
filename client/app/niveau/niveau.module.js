@@ -8,6 +8,7 @@ var niveauApp = angular.module('niveauApp', ['commonApp',
 
 niveauApp.config(function ($stateProvider) {
     $stateProvider
+    
         .state('niveau', {
             url: '/niveau',
             templateUrl: 'app/niveau/views/index.html',
@@ -15,21 +16,19 @@ niveauApp.config(function ($stateProvider) {
             authenticate: true
         })
 
-    
     // permet l'acces à la page niveauiframe directement 
+    .state('niveaudetail', {
+        url: '/niveau/:niveauId',
+        templateUrl: 'app/niveau/views/detail.html',
+        controller: 'NiveauController'
 
-    $stateProvider
-        .state('niveaudetail', {
-            url: '/niveau/:niveauId',
-            templateUrl: 'app/niveau/views/detail.html',
-            controller: 'NiveauController'
+    })
 
-        })
-       
+
     .state('goiframefromProfil', {
-url:'/niveau',
+        url: '/niveau',
         templateUrl: 'app/niveau/views/index.html',
         controller: 'NiveauController',
-        authenticate:true
+        authenticate: true
     });
 });

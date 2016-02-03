@@ -1,3 +1,4 @@
+'use strict';
 adminApp.factory('AdminAppService', function ($resource, CONSTANT) {
 
 

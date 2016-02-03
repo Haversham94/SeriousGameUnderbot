@@ -4,7 +4,7 @@
 
     function AuthService($location, $http, $cookies, $q, CONSTANT, Util, User) {
         var appConfig = CONSTANT.appConfig;
-        var safeCb = Util.safeCb;
+        var safeCb = Util.safeCb; //callbacks 
         var currentUser = {};
         var userRoles = appConfig.userRoles || [];
 
@@ -161,6 +161,7 @@
                             return has;
                         });
                 },
+
 
                 /**
                  * Check if a user is an admin

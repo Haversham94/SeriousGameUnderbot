@@ -142,7 +142,7 @@ adminApp.controller('AdminController', function ($scope, User, $state, Auth, not
 
         for (var i = 0; i < plength; i++) {
 
-            password += keylist.charAt(Math.floor(Math.random() * keylist.length))
+            password += keylist.charAt(Math.floor(Math.random() * keylist.length));
         }
         return password;
 
