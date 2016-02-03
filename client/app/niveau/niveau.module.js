@@ -26,10 +26,5 @@ niveauApp.config(function ($stateProvider) {
 
         })
        
-    .state('goiframefromProfil', {
-url:'/niveau',
-        templateUrl: 'app/niveau/views/index.html',
-        controller: 'NiveauController',
-        authenticate:true
-    });
+    
 });

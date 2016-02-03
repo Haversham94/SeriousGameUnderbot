@@ -43,6 +43,8 @@ adminApp.config(function ($stateProvider, $urlRouterProvider) {
         .state('admin.afficherstats', {
             url: '/afficherstats',
             templateUrl: 'app/admin/views/afficherstats.html',
+            controller: 'AdminController',
+            authenticate: 'admin'
 
         })
 

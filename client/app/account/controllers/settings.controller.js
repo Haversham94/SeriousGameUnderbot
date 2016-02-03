@@ -14,12 +14,12 @@ accountApp.controller('SettingsController', function (Auth, $state, $scope) {
     };
     $scope.GoiframefromProfilClick = function () {
 
-        $state.go('goiframefromProfil');
+        $state.go('goiframe');
 
     };
     $scope.BacktoProfilClick = function () {
 
-        $state.go('backtoProfil');
+        $state.go('profil');
 
     };
 

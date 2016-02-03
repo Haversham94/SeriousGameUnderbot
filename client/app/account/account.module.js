@@ -44,13 +44,12 @@ accountApp.config(function ($stateProvider) {
         authenticate: true
     })
 
-    .state('backtoProfil', {
-        url: '/profil',
-        templateUrl: 'app/account/views/profil.html',
-        controller: 'SettingsController',
-        authenticate: true
-    })
-
+    .state('goiframe', {
+url:'/niveau',
+        templateUrl: 'app/niveau/views/index.html',
+        controller: 'NiveauController',
+        authenticate:true
+    });
 
 });
 

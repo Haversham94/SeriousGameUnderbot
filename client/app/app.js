@@ -23,6 +23,8 @@ var sguApp = angular.module('seriousGameUnderbotApp', [
     'validation.match'
 
 ]);
+
+
 sguApp.config(function ($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
     // redirect to '/' while accessing incorrect url  
